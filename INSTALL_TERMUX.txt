@@ -1,0 +1,45 @@
+5 Million Promter / Dasturchi — TERMUX (OFFLINE)
+================================================
+
+MUHIM: pip, internet, aiogram, SQLAlchemy va tmux KERAK EMAS.
+Bot faqat Python standart kutubxonasi bilan ishlaydi: bot_offline.py
+
+1) Yangi ZIP ni olib, ustiga yozib oching:
+   cd ~
+   unzip -o 5_million_promter_termux.zip
+   cd ~/5_million_promter
+
+2) Tekshirish (hech narsa o'rnatilmaydi):
+   bash termux_setup.sh
+
+3) Avval xatoni ko'rish uchun (qisqa):
+   bash termux_start.sh
+   Chiqqan yozuvlarni menga yuboring. To'xtatish: Ctrl+C
+
+   "No module named 'aiogram'" xatoli endi imkonsiz:
+   - python bot_offline.py  -> to'g'ridan-to'g'ri offline bot
+   - python bot.py          -> aiogram yo'q bo'lsa, o'zi bot_offline.py ga o'tadi
+
+4) Fon rejimi — TMUX BO'LMASA HAM ISHLAYDI (tavsiya etiladi):
+   bash termux_bg.sh
+   -> tmux bor bo'lsa tmux ishlatadi, yo'q bo'lsa avtomatik nohup ga o'tadi.
+
+   Yoki to'g'ridan-to'g'ri nohup:
+   bash termux_nohup.sh
+
+5) Loglarni ko'rish:
+   tmux ishlatilgan bo'lsa:  tmux attach -t promter
+   nohup ishlatilgan bo'lsa: tail -f bot.log
+   Logdan chiqish: Ctrl+C (bot to'xtamaydi)
+
+6) To'xtatish:
+   tmux uchun:  bash termux_stop.sh
+   nohup uchun: bash termux_stop_nohup.sh
+
+7) Bot ishlayotganligini tekshirish:
+   ps aux | grep bot_offline
+   yoki
+   cat bot.pid
+
+.env ichida token, admin ID va karta ma'lumotlari allaqachon bor.
+Termux sozlamalarida Battery optimization ni o'chirishni unutmang.

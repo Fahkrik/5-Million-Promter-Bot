@@ -1,0 +1,23 @@
+5 Million Promter / Dasturchi — TERMUX BUILD V3
+================================================
+
+Bu fayl borligi sizda YANGI versiya ekanligini isbotlaydi.
+
+Tekshirish:
+    cat VERSION.txt
+Natija: "TERMUX BUILD V3" bo'lishi kerak.
+
+V3 ichida:
+    bot_offline.py          -> aiogram/pip kerak emas (asosiy bot)
+    bot.py                  -> aiogram yo'q bo'lsa, o'zi bot_offline.py ga o'tadi
+    termux_start.sh         -> faqat bot_offline.py ni ishga tushiradi
+    termux_bg.sh            -> tmux bo'lmasa avtomatik nohup
+    termux_nohup.sh         -> tmux'siz fon rejimi
+    termux_stop_nohup.sh    -> nohup ni to'xtatish
+    INSTALL_TERMUX.txt      -> yangi ko'rsatma
+
+Eski belgilar (bularni ko'rsangiz — eski fayllardasiz):
+    bot_offline.py topilmadi
+    bot.py 4-qator: from aiogram import ...
+    "Bot ishga tushyapti... (to'xtatish uchun Ctrl+C)"
+    "Bot fon rejimida ishga tushirildi (tmux session: promter)."
